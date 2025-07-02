@@ -2,7 +2,7 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+        "api/index.php": { "runtime": "vercel-php@0.7.0" }
     },
     "routes": [
         { "src": "/build/(.*)", "dest": "/public/build/" },
@@ -14,7 +14,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "mysql://umbmagazine_workerfar:687cbc4c8d18ddacc0c57c2fdc4f30e0a96c7dce@eb6o5.h.filess.io:3307/umbmagazine_workerfar",
+        "APP_URL": "https://your-app.vercel.app",
         "APP_KEY": "base64:TGaVaXwhWgjn9akhE4SCSIjGG/cQqvICUQ+PgLA3Bs0=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
