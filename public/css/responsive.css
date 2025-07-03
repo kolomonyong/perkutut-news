@@ -1,0 +1,245 @@
+/* filepath: public/css/responsive.css */
+/* Base styles - Mobile First Approach */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Grid System */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col {
+    flex: 1;
+    padding: 0 15px;
+    min-width: 0;
+}
+
+/* Column sizes for different breakpoints */
+.col-12 { width: 100%; }
+.col-11 { width: 91.666667%; }
+.col-10 { width: 83.333333%; }
+.col-9 { width: 75%; }
+.col-8 { width: 66.666667%; }
+.col-7 { width: 58.333333%; }
+.col-6 { width: 50%; }
+.col-5 { width: 41.666667%; }
+.col-4 { width: 33.333333%; }
+.col-3 { width: 25%; }
+.col-2 { width: 16.666667%; }
+.col-1 { width: 8.333333%; }
+
+/* Navigation */
+.navbar {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 15px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Magazine Cards */
+.magazine-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.magazine-card:hover {
+    transform: translateY(-5px);
+}
+
+.magazine-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.magazine-content {
+    padding: 1.5rem;
+}
+
+.magazine-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.magazine-excerpt {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 3rem; }
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+    .col-md-12 { width: 100%; }
+    .col-md-11 { width: 91.666667%; }
+    .col-md-10 { width: 83.333333%; }
+    .col-md-9 { width: 75%; }
+    .col-md-8 { width: 66.666667%; }
+    .col-md-7 { width: 58.333333%; }
+    .col-md-6 { width: 50%; }
+    .col-md-5 { width: 41.666667%; }
+    .col-md-4 { width: 33.333333%; }
+    .col-md-3 { width: 25%; }
+    .col-md-2 { width: 16.666667%; }
+    .col-md-1 { width: 8.333333%; }
+
+    .magazine-image {
+        height: 250px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .col-lg-12 { width: 100%; }
+    .col-lg-11 { width: 91.666667%; }
+    .col-lg-10 { width: 83.333333%; }
+    .col-lg-9 { width: 75%; }
+    .col-lg-8 { width: 66.666667%; }
+    .col-lg-7 { width: 58.333333%; }
+    .col-lg-6 { width: 50%; }
+    .col-lg-5 { width: 41.666667%; }
+    .col-lg-4 { width: 33.333333%; }
+    .col-lg-3 { width: 25%; }
+    .col-lg-2 { width: 16.666667%; }
+    .col-lg-1 { width: 8.333333%; }
+
+    .magazine-image {
+        height: 300px;
+    }
+}
+
+/* Mobile Navigation */
+@media (max-width: 767px) {
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .navbar-nav.active {
+        display: flex;
+    }
+
+    .magazine-card {
+        margin-bottom: 1rem;
+    }
+
+    .magazine-content {
+        padding: 1rem;
+    }
+
+    .magazine-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .navbar .container {
+        padding: 0.75rem 10px;
+    }
+
+    .magazine-image {
+        height: 180px;
+    }
+
+    .magazine-content {
+        padding: 0.75rem;
+    }
+
+    .row {
+        margin: 0 -10px;
+    }
+
+    .col {
+        padding: 0 10px;
+    }
+}
